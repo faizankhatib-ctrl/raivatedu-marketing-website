@@ -11,6 +11,8 @@ export const courses = [
     level: "Intermediate",
     durationWeeks: 16,
     hoursPerWeek: 12,
+    projectsCount: 4,
+    hasCertificate: true,
     price: 34999,
     originalPrice: 49999,
     nextCohortDate: "November 15, 2026",
@@ -28,12 +30,16 @@ export const courses = [
       avatar:
         "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&q=80",
       bio: "Focuses on scalable web architecture, server-side rendering performance, and database indexing strategies.",
+      expertise: ["Next.js App Router", "Node.js", "PostgreSQL", "System Architecture"],
     },
+    prerequisites: "Working knowledge of modern JavaScript (ES6+), HTML, and basic React component concepts.",
     outcomes: [
-      "Master Next.js App Router server components and streaming hydration",
-      "Model relational data with PostgreSQL, Prisma ORM, and database migrations",
-      "Implement role-based authorization, session security, and OAuth flows",
-      "Deploy containerized microservices to cloud infrastructure with CI/CD",
+      "Architect Next.js App Router applications with Server Components and streaming hydration",
+      "Model relational data with PostgreSQL, Prisma ORM, and resilient migration patterns",
+      "Implement role-based authorization, session security, and OAuth authentication flows",
+      "Deploy containerized microservices to cloud infrastructure with automated CI/CD pipelines",
+      "Optimize web vital metrics to achieve 90+ Lighthouse Performance and Accessibility scores",
+      "Conduct rigorous code reviews and participate in live system design interview critiques",
     ],
     syllabus: [
       {
@@ -65,6 +71,26 @@ export const courses = [
         project: "Production-ready Scalable Collaborative Platform",
       },
     ],
+    reviews: [
+      {
+        id: "rev-1",
+        author: "Pooja Deshmukh",
+        role: "Junior Frontend Engineer (Sample)",
+        rating: 5,
+        date: "October 2026",
+        comment:
+          "The Next.js App Router deep dive and backend microservices module prepared me directly for technical rounds. The bi-weekly mentor code reviews were invaluable.",
+      },
+      {
+        id: "rev-2",
+        author: "Devendra Rathore",
+        role: "Software Developer (Sample)",
+        rating: 5,
+        date: "September 2026",
+        comment:
+          "Building 4 full capstones instead of following toy tutorials made all the difference when demonstrating projects to interviewers.",
+      },
+    ],
   },
   {
     id: "uiux-design-systems",
@@ -78,6 +104,8 @@ export const courses = [
     level: "All Levels",
     durationWeeks: 12,
     hoursPerWeek: 10,
+    projectsCount: 4,
+    hasCertificate: true,
     price: 27999,
     originalPrice: 39999,
     nextCohortDate: "December 1, 2026",
@@ -95,12 +123,16 @@ export const courses = [
       avatar:
         "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=200&q=80",
       bio: "Specializes in multi-brand design tokens, accessible color theory, and cross-functional design system tooling.",
+      expertise: ["Design Tokens", "Figma Systems", "WCAG 2.1 AA", "User Research"],
     },
+    prerequisites: "Basic familiarity with Figma or digital graphic software. No prior programming experience required.",
     outcomes: [
-      "Construct multi-tiered Figma component libraries with variables and variants",
-      "Conduct UX usability audits and design research interviews",
-      "Enforce WCAG 2.1 AA contrast and screen-reader accessibility rules",
-      "Deliver engineering-ready specifications with token documentation",
+      "Construct multi-tiered Figma component libraries with variables, variants, and auto-layout",
+      "Conduct structured UX usability audits and synthesis interviews",
+      "Enforce WCAG 2.1 AA contrast and screen-reader accessibility rules across interfaces",
+      "Deliver engineering-ready specifications with standardized token documentation",
+      "Build high-fidelity micro-interaction prototypes using Figma Smart Animate",
+      "Establish versioning and governance protocols for cross-functional design teams",
     ],
     syllabus: [
       {
@@ -132,6 +164,26 @@ export const courses = [
         project: "Enterprise Design System Guidelines Portal",
       },
     ],
+    reviews: [
+      {
+        id: "rev-3",
+        author: "Karan Verma",
+        role: "Product Designer (Sample)",
+        rating: 5,
+        date: "October 2026",
+        comment:
+          "Weekly 1:1 mentor critiques taught me how to articulate design token architectures and prepare developer-ready handoff documentation.",
+      },
+      {
+        id: "rev-4",
+        author: "Simran Kaur",
+        role: "UI Engineer (Sample)",
+        rating: 5,
+        date: "September 2026",
+        comment:
+          "The focus on WCAG 2.1 AA contrast and accessible component states separated this cohort from surface-level UI tutorials.",
+      },
+    ],
   },
   {
     id: "ds-ai-applied",
@@ -145,6 +197,8 @@ export const courses = [
     level: "Intermediate",
     durationWeeks: 16,
     hoursPerWeek: 12,
+    projectsCount: 4,
+    hasCertificate: true,
     price: 36999,
     originalPrice: 52999,
     nextCohortDate: "November 25, 2026",
@@ -162,12 +216,16 @@ export const courses = [
       avatar:
         "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=80",
       bio: "Focuses on predictive statistical modeling, data visualization pipelines, and applied NLP systems.",
+      expertise: ["Python", "Pandas", "Scikit-Learn", "FastAPI Serving"],
     },
+    prerequisites: "Basic programming fundamentals in Python (loops, functions, dictionaries). High school algebra.",
     outcomes: [
-      "Process complex real-world datasets with Pandas and NumPy",
-      "Train classification and regression models with Scikit-Learn",
-      "Deploy ML models as REST API inference microservices with FastAPI",
+      "Process complex, messy real-world datasets using Pandas and NumPy",
+      "Train classification and regression models with Scikit-Learn pipelines",
+      "Deploy ML models as REST API inference microservices with FastAPI and Docker",
       "Integrate LLM APIs with retrieval-augmented generation (RAG) workflows",
+      "Apply statistical hypothesis testing and feature selection techniques",
+      "Evaluate model performance using ROC-AUC, Precision-Recall, and latency profiling",
     ],
     syllabus: [
       {
@@ -199,6 +257,17 @@ export const courses = [
         project: "Domain Knowledge Q&A Assistant Pipeline",
       },
     ],
+    reviews: [
+      {
+        id: "rev-5",
+        author: "Ananya Iyer",
+        role: "Data Analyst (Sample)",
+        rating: 5,
+        date: "October 2026",
+        comment:
+          "Having my data analysis scripts reviewed line-by-line by an experienced practitioner gave me the confidence to present models to stakeholders.",
+      },
+    ],
   },
   {
     id: "cloud-devops-kubernetes",
@@ -212,6 +281,8 @@ export const courses = [
     level: "Advanced",
     durationWeeks: 14,
     hoursPerWeek: 12,
+    projectsCount: 4,
+    hasCertificate: true,
     price: 38999,
     originalPrice: 54999,
     nextCohortDate: "December 5, 2026",
@@ -229,12 +300,16 @@ export const courses = [
       avatar:
         "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200&q=80",
       bio: "Passionate about immutable infrastructure, zero-downtime rolling deployments, and container orchestration.",
+      expertise: ["Docker", "Kubernetes", "AWS Architecture", "Terraform"],
     },
+    prerequisites: "Comfort with command-line Linux environments, networking fundamentals, and basic scripting.",
     outcomes: [
-      "Provision reproducible cloud infrastructure using Terraform",
-      "Deploy and manage container workloads with Kubernetes pods and services",
+      "Provision reproducible cloud infrastructure using Terraform scripts",
+      "Deploy and manage container workloads with Kubernetes pods, ingress, and services",
       "Implement robust automated CI/CD pipelines with GitHub Actions",
       "Configure Prometheus and Grafana alerting and distributed observability",
+      "Design multi-zone VPC networks with secure subnets and security group rules",
+      "Implement zero-downtime rolling updates and automated pod horizontal scaling",
     ],
     syllabus: [
       {
@@ -266,6 +341,17 @@ export const courses = [
         project: "Zero-Downtime Continuous Deployment Pipeline",
       },
     ],
+    reviews: [
+      {
+        id: "rev-6",
+        author: "Manish Pandey",
+        role: "DevOps Engineer (Sample)",
+        rating: 5,
+        date: "September 2026",
+        comment:
+          "The Kubernetes hands-on projects and Terraform state management labs gave me concrete architectural patterns I use every day.",
+      },
+    ],
   },
   {
     id: "pm-strategy-execution",
@@ -279,6 +365,8 @@ export const courses = [
     level: "Beginner",
     durationWeeks: 10,
     hoursPerWeek: 8,
+    projectsCount: 4,
+    hasCertificate: true,
     price: 24999,
     originalPrice: 34999,
     nextCohortDate: "December 10, 2026",
@@ -296,12 +384,16 @@ export const courses = [
       avatar:
         "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=200&q=80",
       bio: "Mentors product builders on North Star metrics, customer interview frameworks, and backlog prioritization.",
+      expertise: ["Product Discovery", "PRD Writing", "Cohort Analytics", "Agile Sprints"],
     },
+    prerequisites: "No technical prerequisites. Suitable for aspiring product managers, business analysts, and designers.",
     outcomes: [
-      "Conduct structured customer discovery interviews and define personas",
+      "Conduct structured customer discovery interviews using Jobs-to-be-Done (JTBD)",
       "Author rigorous Product Requirement Documents (PRDs) with acceptance criteria",
-      "Calculate unit economics, cohort retention, and funnel conversion rates",
+      "Calculate unit economics, cohort retention curves, and funnel conversion rates",
       "Run sprint planning sessions, standups, and stakeholder roadmapping",
+      "Prioritize feature backlogs using RICE and Value vs Effort scoring matrices",
+      "Design data-driven A/B test experiments with statistical significance thresholds",
     ],
     syllabus: [
       {
@@ -333,6 +425,17 @@ export const courses = [
         project: "Quarterly Product Strategy Roadmap",
       },
     ],
+    reviews: [
+      {
+        id: "rev-7",
+        author: "Meera Nair",
+        role: "Associate Product Manager (Sample)",
+        rating: 5,
+        date: "October 2026",
+        comment:
+          "The PRD writing workshops and metrics retention curves gave me real artifacts I could walk interviewers through.",
+      },
+    ],
   },
   {
     id: "frontend-react-typescript",
@@ -346,6 +449,8 @@ export const courses = [
     level: "Beginner",
     durationWeeks: 12,
     hoursPerWeek: 10,
+    projectsCount: 4,
+    hasCertificate: true,
     price: 26999,
     originalPrice: 37999,
     nextCohortDate: "November 20, 2026",
@@ -363,12 +468,16 @@ export const courses = [
       avatar:
         "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&q=80",
       bio: "Focuses on clean React state architectures, accessibility, and modern CSS systems.",
+      expertise: ["React 19", "TypeScript", "Tailwind CSS", "Web Accessibility"],
     },
+    prerequisites: "Basic familiarity with HTML, CSS, and elementary JavaScript fundamentals.",
     outcomes: [
       "Write strongly-typed React components with TypeScript generics and interfaces",
       "Build custom hooks for asynchronous data fetching and cache invalidation",
       "Implement accessible dialogs, dropdowns, and form validation systems",
       "Test component logic with Vitest and React Testing Library",
+      "Optimize rendering performance and eliminate unnecessary re-renders",
+      "Structure modular frontends following domain-driven design principles",
     ],
     syllabus: [
       {
@@ -400,6 +509,17 @@ export const courses = [
         project: "High-performance Production Web Application",
       },
     ],
+    reviews: [
+      {
+        id: "rev-8",
+        author: "Rohan Gupta",
+        role: "Frontend Engineer (Sample)",
+        rating: 5,
+        date: "October 2026",
+        comment:
+          "Learning TypeScript side-by-side with React completely transformed the quality and reliability of the code I write.",
+      },
+    ],
   },
   {
     id: "app-security-cyberdefense",
@@ -413,6 +533,8 @@ export const courses = [
     level: "Intermediate",
     durationWeeks: 12,
     hoursPerWeek: 10,
+    projectsCount: 4,
+    hasCertificate: true,
     price: 31999,
     originalPrice: 44999,
     nextCohortDate: "December 15, 2026",
@@ -430,12 +552,16 @@ export const courses = [
       avatar:
         "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200&q=80",
       bio: "Focuses on defensive coding practices, token security, and secure API gateways.",
+      expertise: ["OWASP Top 10", "Network Security", "Auth Protocols", "Penetration Testing"],
     },
+    prerequisites: "Understanding of basic web networking (HTTP, TCP, IP), and web application programming.",
     outcomes: [
       "Remediate SQL injection, Cross-Site Scripting (XSS), and CSRF vulnerabilities",
       "Configure Content Security Policies (CSP) and secure HTTP response headers",
       "Implement cryptographic hashing, salt generation, and digital signatures",
       "Perform automated static analysis security testing (SAST) in CI pipelines",
+      "Audit JWT signature verification routines and session expiration mechanisms",
+      "Perform vulnerability assessments following industry standard testing checklists",
     ],
     syllabus: [
       {
@@ -467,6 +593,17 @@ export const courses = [
         project: "Automated Security Audit Pipeline in GitHub Actions",
       },
     ],
+    reviews: [
+      {
+        id: "rev-9",
+        author: "Tariq Aziz",
+        role: "Security Analyst (Sample)",
+        rating: 5,
+        date: "September 2026",
+        comment:
+          "Hands-on labs auditing deliberately vulnerable web targets taught me how attackers actually exploit application misconfigurations.",
+      },
+    ],
   },
   {
     id: "data-analytics-bi",
@@ -480,6 +617,8 @@ export const courses = [
     level: "Beginner",
     durationWeeks: 10,
     hoursPerWeek: 8,
+    projectsCount: 4,
+    hasCertificate: true,
     price: 22999,
     originalPrice: 32999,
     nextCohortDate: "November 28, 2026",
@@ -497,12 +636,16 @@ export const courses = [
       avatar:
         "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=80",
       bio: "Guides students through complex SQL window functions, cohort retention modeling, and data storytelling.",
+      expertise: ["SQL", "Data Modeling", "Business Intelligence", "Cohort Analytics"],
     },
+    prerequisites: "No technical prerequisites. Basic familiarity with spreadsheets is helpful.",
     outcomes: [
       "Write multi-table SQL queries with complex joins, aggregations, and window functions",
-      "Model dimensional schemas (Star & Snowflake) for analytical reporting",
+      "Model dimensional schemas (Star & Snowflake) for analytical data reporting",
       "Construct interactive executive dashboards with KPI indicators",
       "Synthesize business findings into concise visual presentations for stakeholders",
+      "Calculate customer acquisition cost (CAC), LTV, and retention cohort matrices",
+      "Automate reporting workflows with parameterized queries and views",
     ],
     syllabus: [
       {
@@ -534,6 +677,17 @@ export const courses = [
         project: "Executive Growth & Revenue Dashboard",
       },
     ],
+    reviews: [
+      {
+        id: "rev-10",
+        author: "Kavita Rao",
+        role: "Business Analyst (Sample)",
+        rating: 5,
+        date: "October 2026",
+        comment:
+          "The practical SQL queries and dashboard assignments gave me the exact portfolio evidence I needed to shift into analytics.",
+      },
+    ],
   },
 ];
 
@@ -543,4 +697,17 @@ export function getFeaturedCourses() {
 
 export function getCourseBySlug(slug) {
   return courses.find((c) => c.slug === slug);
+}
+
+export function getRelatedCourses(currentSlug, category, limit = 3) {
+  const sameCategory = courses.filter(
+    (c) => c.slug !== currentSlug && c.category === category
+  );
+  if (sameCategory.length >= limit) {
+    return sameCategory.slice(0, limit);
+  }
+  const others = courses.filter(
+    (c) => c.slug !== currentSlug && c.category !== category
+  );
+  return [...sameCategory, ...others].slice(0, limit);
 }
