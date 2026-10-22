@@ -89,7 +89,6 @@ export default function Footer() {
               <Link
                 href="/"
                 className="flex items-center gap-3 w-fit focus-visible:outline-2 focus-visible:outline-[#FBBF24] rounded-lg p-1"
-                aria-label="Raivatedu Home"
               >
                 <span className="w-10 h-10 rounded-xl bg-[#4338CA] text-white flex items-center justify-center shadow-md">
                   <GraduationCap className="w-6 h-6 text-[#FBBF24]" />

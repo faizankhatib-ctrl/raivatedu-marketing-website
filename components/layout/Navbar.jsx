@@ -110,7 +110,6 @@ export default function Navbar() {
           <Link
             href="/"
             className="flex items-center gap-3 group focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#4338CA] rounded-xl p-1"
-            aria-label="Raivatedu Home"
           >
             <span className="w-10 h-10 rounded-xl bg-[#1E1B4B] text-white flex items-center justify-center shadow-sm group-hover:bg-[#4338CA] transition-colors relative overflow-hidden">
               <GraduationCap className="w-6 h-6 text-[#FBBF24]" />

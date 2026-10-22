@@ -146,7 +146,7 @@ export default function EnrollmentModal({ isOpen, onClose, course }) {
         className="relative w-full max-w-lg bg-[#FAF8F5] rounded-3xl shadow-2xl border border-[#E7E0D6] overflow-hidden animate-in zoom-in-95 duration-200 max-h-[90vh] flex flex-col"
       >
         {/* Modal Header */}
-        <div className="p-6 sm:p-7 bg-white border-b border-[#E7E0D6] flex items-center justify-between">
+        <div className="p-5 sm:p-6 bg-white border-b border-[#E7E0D6] flex items-center justify-between">
           <div>
             <div className="flex items-center gap-1.5 mb-1">
               <span className="text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded bg-[#FEF3C7] text-[#92400E] border border-[#FDE68A]">
@@ -172,47 +172,47 @@ export default function EnrollmentModal({ isOpen, onClose, course }) {
         </div>
 
         {/* Modal Body */}
-        <div className="p-6 sm:p-7 overflow-y-auto">
+        <div className="p-5 sm:p-6 overflow-y-auto">
           {isSuccess ? (
             /* Success Confirmation State */
-            <div className="text-center space-y-5">
-              <div className="w-16 h-16 rounded-2xl bg-emerald-100 text-emerald-700 flex items-center justify-center mx-auto border border-emerald-200">
-                <CheckCircle2 className="w-9 h-9" />
+            <div className="text-center space-y-3">
+              <div className="w-11 h-11 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center mx-auto border border-emerald-200">
+                <CheckCircle2 className="w-6 h-6" />
               </div>
 
               <div>
                 <h3 className="text-lg font-bold text-[#1E1B4B]">
                   Illustrative Enrollment Confirmed!
                 </h3>
-                <p className="text-sm text-[#475569] mt-1.5 max-w-sm mx-auto leading-relaxed">
+                <p className="text-xs text-[#475569] mt-0.5 max-w-sm mx-auto leading-relaxed">
                   Thank you, <strong className="text-[#1E1B4B]">{formData.fullName}</strong>. Your sample application for the upcoming cohort has been processed in demonstration mode.
                 </p>
               </div>
 
               {/* Application Details Summary */}
-              <div className="p-4 rounded-2xl bg-white border border-[#E7E0D6] text-left text-xs space-y-2">
-                <div className="flex justify-between py-1 border-b border-[#E7E0D6]">
+              <div className="p-3.5 rounded-2xl bg-white border border-[#E7E0D6] text-left text-xs space-y-1.5">
+                <div className="flex justify-between py-0.5 border-b border-[#E7E0D6]">
                   <span className="text-[#64748B]">Application ID:</span>
                   <span className="font-mono font-bold text-[#4338CA]">{applicationId}</span>
                 </div>
-                <div className="flex justify-between py-1 border-b border-[#E7E0D6]">
+                <div className="flex justify-between py-0.5 border-b border-[#E7E0D6]">
                   <span className="text-[#64748B]">Cohort Date:</span>
                   <span className="font-bold text-[#1E1B4B]">{course.nextCohortDate}</span>
                 </div>
-                <div className="flex justify-between py-1 border-b border-[#E7E0D6]">
+                <div className="flex justify-between py-0.5 border-b border-[#E7E0D6]">
                   <span className="text-[#64748B]">Tuition Fee:</span>
                   <span className="font-bold text-[#1E1B4B]">₹{course.price.toLocaleString("en-IN")}</span>
                 </div>
-                <div className="flex justify-between py-1">
+                <div className="flex justify-between py-0.5">
                   <span className="text-[#64748B]">Applicant Contact:</span>
                   <span className="font-medium text-[#1E1B4B]">{formData.email}</span>
                 </div>
               </div>
 
               {/* Transparent Demo Disclosure */}
-              <div className="p-3.5 rounded-xl bg-[#FEF3C7]/70 border border-[#FDE68A] text-[11px] text-[#92400E] text-left flex items-start gap-2">
+              <div className="p-3 rounded-xl bg-[#FEF3C7]/70 border border-[#FDE68A] text-[11px] text-[#92400E] text-left flex items-start gap-2">
                 <Sparkles className="w-4 h-4 shrink-0 mt-0.5 text-[#D97706]" />
-                <p>
+                <p className="leading-snug">
                   <strong>Internship Assignment Notice:</strong> This is an illustrative frontend prototype for Meru Technosoft Private Limited. No live backend request was made, and no real payment was processed.
                 </p>
               </div>
