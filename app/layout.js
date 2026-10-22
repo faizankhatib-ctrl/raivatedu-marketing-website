@@ -37,17 +37,27 @@ export const metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://raivatedu.vercel.app",
     siteName: "Raivatedu",
     title: "Raivatedu — Modern Online Education & Mentorship Platform",
     description:
       "Master in-demand tech and design skills with industry-standard cohort curriculums, hands-on projects, and 1:1 mentorship guidance.",
+    images: [
+      {
+        url: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=1200&h=630&q=80",
+        width: 1200,
+        height: 630,
+        alt: "Raivatedu Platform Overview",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Raivatedu — Modern Online Education & Mentorship Platform",
     description:
       "Master in-demand tech and design skills with industry-standard cohort curriculums, hands-on projects, and 1:1 mentorship guidance.",
+    images: [
+      "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=1200&h=630&q=80",
+    ],
   },
 };
 

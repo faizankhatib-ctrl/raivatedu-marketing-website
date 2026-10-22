@@ -16,6 +16,12 @@ export const metadata = {
     description:
       "Explore cohort-based learning for developers and designers. Build production-grade portfolio capstones with bi-weekly 1:1 code reviews from industry practitioners.",
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Raivatedu — Master Tech & Design Skills with 1:1 Mentorship",
+    description:
+      "Explore cohort-based learning for developers and designers. Build production-grade portfolio capstones with bi-weekly 1:1 code reviews from industry practitioners.",
+  },
 };
 
 export default function HomePage() {

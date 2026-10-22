@@ -14,6 +14,12 @@ export const metadata = {
     description:
       "Discover industry-aligned cohorts across Web Engineering, UI/UX Systems, Data Science, and Cloud Architecture with weekly 1:1 mentorship.",
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Explore All Programs & Cohorts | Raivatedu",
+    description:
+      "Discover industry-aligned cohorts across Web Engineering, UI/UX Systems, Data Science, and Cloud Architecture with weekly 1:1 mentorship.",
+  },
 };
 
 function CatalogLoadingSkeleton() {
