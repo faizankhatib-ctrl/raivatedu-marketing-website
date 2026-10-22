@@ -31,6 +31,9 @@ export function generateStaticParams() {
   }));
 }
 
+// Allow blocking route resolution for dynamic slug evaluations under Next.js 16 Partial Prefetching
+export const instant = false;
+
 // Generate unique dynamic metadata for SEO
 export async function generateMetadata({ params }) {
   const resolvedParams = await params;
