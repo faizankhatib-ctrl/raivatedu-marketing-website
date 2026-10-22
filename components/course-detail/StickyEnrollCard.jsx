@@ -86,7 +86,7 @@ frontend internship prototype for Meru Technosoft Private Limited.
           <span className="text-3xl sm:text-4xl font-black text-[#1E1B4B]">
             ₹{course.price.toLocaleString("en-IN")}
           </span>
-          <span className="text-sm text-[#94A3B8] line-through font-medium">
+          <span className="text-sm text-[#64748B] line-through font-medium">
             ₹{course.originalPrice.toLocaleString("en-IN")}
           </span>
         </div>

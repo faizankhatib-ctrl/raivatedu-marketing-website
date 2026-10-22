@@ -79,9 +79,9 @@ export default function SyllabusModuleAccordion({ syllabus = [] }) {
                           {module.lessonsCount} Lessons
                         </span>
                       </div>
-                      <h4 className="text-base sm:text-lg font-bold text-[#1E1B4B] leading-snug">
+                      <span className="text-base sm:text-lg font-bold text-[#1E1B4B] leading-snug block">
                         {module.title}
-                      </h4>
+                      </span>
                     </div>
                   </div>
 

@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Menu, X, Sparkles, GraduationCap, ArrowRight } from "lucide-react";
@@ -19,6 +19,9 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const pathname = usePathname();
+  const hamburgerRef = useRef(null);
+  const mobileDrawerRef = useRef(null);
+  const wasOpenRef = useRef(false);
 
   // Handle scroll detection for sticky elevation
   useEffect(() => {
@@ -36,22 +39,60 @@ export default function Navbar() {
     setIsOpen(false);
   }
 
-  // Lock body scroll and handle Escape key when mobile menu is open
+  // Lock body scroll, handle Escape key, focus management and focus trap
   useEffect(() => {
     if (isOpen) {
+      wasOpenRef.current = true;
       document.body.style.overflow = "hidden";
+
+      // Focus first interactive element in drawer
+      const timer = setTimeout(() => {
+        if (mobileDrawerRef.current) {
+          const firstFocusable = mobileDrawerRef.current.querySelector(
+            'a[href], button:not([disabled])'
+          );
+          firstFocusable?.focus();
+        }
+      }, 50);
+
       const handleKeyDown = (e) => {
         if (e.key === "Escape") {
+          e.preventDefault();
           setIsOpen(false);
+          return;
+        }
+
+        if (e.key === "Tab" && mobileDrawerRef.current) {
+          const focusable = mobileDrawerRef.current.querySelectorAll(
+            'a[href], button:not([disabled])'
+          );
+          if (!focusable || focusable.length === 0) return;
+
+          const first = focusable[0];
+          const last = focusable[focusable.length - 1];
+
+          if (e.shiftKey && document.activeElement === first) {
+            e.preventDefault();
+            last.focus();
+          } else if (!e.shiftKey && document.activeElement === last) {
+            e.preventDefault();
+            first.focus();
+          }
         }
       };
+
       window.addEventListener("keydown", handleKeyDown);
       return () => {
+        clearTimeout(timer);
         document.body.style.overflow = "unset";
         window.removeEventListener("keydown", handleKeyDown);
       };
     } else {
       document.body.style.overflow = "unset";
+      if (wasOpenRef.current) {
+        wasOpenRef.current = false;
+        hamburgerRef.current?.focus();
+      }
     }
   }, [isOpen]);
 
@@ -133,6 +174,7 @@ export default function Navbar() {
           {/* Mobile Menu Hamburger Button */}
           <div className="flex items-center md:hidden">
             <button
+              ref={hamburgerRef}
               type="button"
               onClick={() => setIsOpen(!isOpen)}
               className="p-2.5 rounded-xl text-[#1E1B4B] hover:bg-[#F3EFEA] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#4338CA] transition-colors"
@@ -158,6 +200,7 @@ export default function Navbar() {
           onClick={() => setIsOpen(false)}
         >
           <div
+            ref={mobileDrawerRef}
             className="bg-[#FAF8F5] border-b border-[#E7E0D6] shadow-xl p-6 max-h-[calc(100vh-5rem)] overflow-y-auto"
             onClick={(e) => e.stopPropagation()}
           >

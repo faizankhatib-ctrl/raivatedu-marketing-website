@@ -136,7 +136,7 @@ export default function HeroSection() {
 
                   <div className="text-right">
                     <span className="text-sm font-extrabold text-[#4338CA]">₹34,999</span>
-                    <span className="block text-[10px] text-[#94A3B8] line-through">₹49,999</span>
+                    <span className="block text-[10px] text-[#64748B] line-through">₹49,999</span>
                   </div>
                 </div>
 

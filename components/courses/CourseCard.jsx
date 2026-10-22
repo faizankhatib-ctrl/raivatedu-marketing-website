@@ -104,7 +104,7 @@ export default function CourseCard({ course }) {
             <span className="text-xl font-black text-[#1E1B4B]">
               ₹{course.price.toLocaleString("en-IN")}
             </span>
-            <span className="text-xs text-[#94A3B8] line-through font-normal">
+            <span className="text-xs text-[#64748B] line-through font-normal">
               ₹{course.originalPrice.toLocaleString("en-IN")}
             </span>
           </div>

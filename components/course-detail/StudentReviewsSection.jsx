@@ -76,7 +76,7 @@ export default function StudentReviewsSection({ course }) {
               </div>
               <div className="text-right">
                 <RatingStars rating={rev.rating} size="sm" showScore={false} />
-                <span className="text-[10px] text-[#94A3B8] block mt-0.5">{rev.date}</span>
+                <span className="text-[10px] text-[#64748B] block mt-0.5">{rev.date}</span>
               </div>
             </div>
 

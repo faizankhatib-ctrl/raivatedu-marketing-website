@@ -58,6 +58,12 @@ export async function generateMetadata({ params }) {
         },
       ],
     },
+    twitter: {
+      card: "summary_large_image",
+      title: `${course.title} | Raivatedu Cohort Curriculum`,
+      description: course.tagline,
+      images: [course.thumbnail],
+    },
   };
 }
 
@@ -117,12 +123,12 @@ export default async function CourseDetailPage({ params }) {
                 reviewsCount={course.reviewsCount}
                 size="md"
               />
-              <span className="text-slate-300">•</span>
+              <span className="text-slate-400" aria-hidden="true">•</span>
               <span className="flex items-center gap-1.5 text-[#64748B]">
                 <Users className="w-4 h-4 text-[#4338CA]" aria-hidden="true" />
                 <span>{course.studentsCount.toLocaleString("en-IN")} Alumni (Sample)</span>
               </span>
-              <span className="text-slate-300">•</span>
+              <span className="text-slate-400" aria-hidden="true">•</span>
               <span className="text-xs uppercase font-bold tracking-wider px-2 py-0.5 rounded bg-[#FEF3C7] text-[#92400E] border border-[#FDE68A]">
                 Illustrative Syllabus
               </span>

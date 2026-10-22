@@ -18,6 +18,7 @@ export default function EnrollmentModal({ isOpen, onClose, course }) {
 
   const modalRef = useRef(null);
   const initialFocusRef = useRef(null);
+  const previouslyFocusedElementRef = useRef(null);
 
   // Reset state during render when modal opens (React 19 recommended pattern)
   const [prevIsOpen, setPrevIsOpen] = useState(isOpen);
@@ -30,15 +31,23 @@ export default function EnrollmentModal({ isOpen, onClose, course }) {
     }
   }
 
-  // Handle body scroll locking and initial focus
+  // Handle body scroll locking, focus trapping, and focus restoration
   useEffect(() => {
     if (isOpen) {
+      previouslyFocusedElementRef.current = document.activeElement;
       document.body.style.overflow = "hidden";
-      setTimeout(() => {
+      const timer = setTimeout(() => {
         initialFocusRef.current?.focus();
       }, 50);
+      return () => {
+        clearTimeout(timer);
+        document.body.style.overflow = "unset";
+      };
     } else {
       document.body.style.overflow = "unset";
+      if (previouslyFocusedElementRef.current && typeof previouslyFocusedElementRef.current.focus === "function") {
+        previouslyFocusedElementRef.current.focus();
+      }
     }
 
     return () => {
@@ -46,13 +55,40 @@ export default function EnrollmentModal({ isOpen, onClose, course }) {
     };
   }, [isOpen]);
 
-  // Handle Escape key to close
+  // Handle Escape key and focus trap inside dialog
   useEffect(() => {
+    if (!isOpen) return;
+
     const handleKeyDown = (e) => {
-      if (e.key === "Escape" && isOpen) {
+      if (e.key === "Escape") {
+        e.preventDefault();
         onClose();
+        return;
+      }
+
+      if (e.key === "Tab" && modalRef.current) {
+        const focusableElements = modalRef.current.querySelectorAll(
+          'a[href], button:not([disabled]), textarea:not([disabled]), input:not([disabled]), select:not([disabled]), [tabindex]:not([tabindex="-1"])'
+        );
+        if (!focusableElements || focusableElements.length === 0) return;
+
+        const firstElement = focusableElements[0];
+        const lastElement = focusableElements[focusableElements.length - 1];
+
+        if (e.shiftKey) {
+          if (document.activeElement === firstElement) {
+            e.preventDefault();
+            lastElement.focus();
+          }
+        } else {
+          if (document.activeElement === lastElement) {
+            e.preventDefault();
+            firstElement.focus();
+          }
+        }
       }
     };
+
     window.addEventListener("keydown", handleKeyDown);
     return () => window.removeEventListener("keydown", handleKeyDown);
   }, [isOpen, onClose]);
